@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+.price-guide {
+    background-color: #eeefea;
+}
+
+.price-guide__inner {
+    padding: 50px 5%;
+}
+
+.price-guide__plan-title {
+    font-family: "Shippori Mincho";
+    font-size: 2.4rem;
+}
+
+.price-guide__plan-subtitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.price-guide__plan {
+    background-color: #fff;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.price-guide__plan-wrapper {
+    display: flex;
+    padding: 20px 37px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    background: rgba(77, 102, 81, 0.65);
+}
+
+.price-guide__plan-prices {
+    color: #4D6651;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.price-guide__plan-image {
+    width: 85%;
+    margin: 20px auto 0;
+}
+
+.price-guide__plan-details li {
+    margin-left: 8%;
+    margin-top: 10px;
+}
+
+.details__icon {
+    margin-right: 10px;
+}
+
+.details__icon img {
+    padding-bottom: 2px;
+}
+
+.price-guide__plan-details {
+    margin-top: 20px;
+}
+
+.price-guide__note {
+    margin-top: 40px;
+}
+
+.price-guide__experience {
+    background-color: #fff;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.price-guide__experience-wrapper {
+    display: flex;
+    padding: 20px 37px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    background: rgba(233, 196, 106, 0.60);
+}
+
+.price-guide__experience-title {
+    font-family: "Shippori Mincho";
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.price-guide__experience-time {
+    font-weight: 500;
+}
+
+.price-guide__experience-price {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.price-guide__experience-description {
+    width: 85%;
+    margin: 30px auto 0;
+}
+
+.price-guide__discount {
+    margin-top: 40px;
+}
+
+.price-guide__discount-text {
+    margin-top: 10px;
+}
+
+.price-guide__discount-title {
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1280px) {
+    .price-guide {
+        padding: 100px 0;
+    }
+
+    .price-guide__wrapper {
+        display: flex;
+        gap: 40px;
+    }
+
+    .price-guide__experience {
+        flex: 1;
+    }
+}

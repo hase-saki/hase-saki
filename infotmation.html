@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ステラノットキャンプは、家族で星空の下キャンプを楽しめる栃木県のキャンプ場です">
+    <!-- favicon apple-touch-icon -->
+    <link rel="icon" type="image/svg" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+    <title>Stella Knot Camp</title>
+    <!-- web font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@800&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/destyle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/information.css">
+
+
+
+</head>
+
+<body>
+    <!-- ＝＝＝＝＝＝＝＝＝＝
+    　       header
+     ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+    <header class="header">
+        <!-- ハンバーガーメニュー -->
+        <button class="header__btn js-btn" aria-label="メニューを開く">
+            <img class="header__icon" src="assets/images/hamburger.svg" alt="メニューを開く">
+        </button>
+    </header>
+
+    <!-- ＝＝＝＝＝＝＝＝＝＝
+    　       drawer-menu
+     ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+    <nav class="drawer">
+        <div class="drawer__header">
+            <div class="drawer__logo">
+                <a href="index.html"><img class="drawer__logo-img" src="assets/images/menu_logo.svg" alt=""></a>
+            </div>
+
+            <button class="drawer__close js-close" aria-label="メニューを閉じる">
+                <img class="drawer__close-icon" src="assets/images/menu_close.svg" alt="閉じる">
+            </button>
+        </div>
+
+        <ul class="drawer__list">
+            <li class="drawer__item"><a href="index.html"><img class="drawer__icon" src="assets/images/stella_icon.svg"
+                        alt="">トップページ</a></li>
+
+            <li class="drawer__item"><a href="index.html#news"><img class="drawer__icon"
+                        src="assets/images/stella_icon.svg" alt="">お知らせ・イベント</a></li>
+
+            <li class="drawer__item"><a href="index.html#concept"><img class="drawer__icon"
+                        src="assets/images/stella_icon.svg" alt="">Stella
+                    Knot Campについて</a></li>
+
+            <li class="drawer__item"><a href="camp-style.html"><img class="drawer__icon"
+                        src="assets/images/stella_icon.svg" alt="">選べる宿泊スタイル</a></li>
+
+            <li class="drawer__item"><a href="index.html#experience"><img class="drawer__icon"
+                        src="assets/images/stella_icon.svg" alt="">自然体験一覧</a></li>
+
+            <li class="drawer__item"><a href="infotmation.html#facilities"><img class="drawer__icon"
+                        src="assets/images/stella_icon.svg" alt="">施設案内</a>
+            </li>
+
+            <li class="drawer__item"><a href="infotmation.html#access"><img class="drawer__icon"
+                        src="assets/images/stella_icon.svg" alt="">アクセス</a>
+            </li>
+
+            <li class="drawer__item"><a href="infotmation.html#faq"><img class="drawer__icon"
+                        src="assets/images/stella_icon.svg" alt="">よくある質問</a></li>
+        </ul>
+
+        <!-- ＝＝＝＝＝＝＝＝＝＝
+    　       drawer-menu ボタン
+         ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <div class="drawer__btns">
+            <a href="#" class="drawer__btn btn btn--info">
+                <span class="btn__icon">
+                    <img class="info__icon-img" src="assets/images/plan_btn_icon.svg" alt="">
+                </span>
+                <span class="btn__text">プラン・料金</span>
+                <span class="btn__arrow">
+                    <img class="info__arrow-img" src="assets/images/plan_btn_arrow.svg" alt="">
+                </span>
+            </a>
+
+            <a href="#" class="drawer__btn btn btn--booking">
+                <span class="btn__icon">
+                    <img class="booking__icon-img" src="assets/images/web_btn_icon.svg" alt="">
+                </span>
+                <span class="btn__text">Web予約</span>
+                <span class="btn__arrow">
+                    <img class="booking__arrow-img" src="assets/images/web_btn_arrow.svg" alt="">
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ＝＝＝＝＝＝＝＝＝＝
+    　       information
+         ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
+    <main>
+
+        <article id="information" class="information">
+            <div class="information__inner">
+                <!-- ===== Access セクション ===== -->
+                <section id="access" class="access">
+
+                    <div class="access__title-wrapper">
+                        <h2 class="section__title access__title">Access</h2>
+                        <p class="section__subtitle">ご来場方法</p>
+                    </div>
+
+                    <div class="access__information">
+                        <div class="access__info">
+                            <h3 class="info__title">
+                                <span class="info__bar"></span>基本情報
+                            </h3>
+                            <p class="access__address">〒330-0845<br>栃木県芳賀郡茂木町2-25</p>
+                            <p class="access__tel">📞0120-900-294</p>
+                            <p class="access__time">チェックイン／13:00〜18:00<br>チェックアウト／〜10:00</p>
+                            <p class="access__parking">
+                                無料駐車場 30台（オートサイト、ウッドデッキサイトは区画内に1台駐車可）<br>
+                                EV充電（普通充電）2基／先着順・無料
+                            </p>
+                        </div>
+                        <div class="access__map-wrapper">
+                            <div class="access__map">
+                                <img src="assets/images/info__access_map.png" alt="地図の画像" class="access__map-img">
+                                <div class="map__more">
+                                    <a href="#" class="main-btn main-btn--outline">
+                                        <span class="main-btn__icon">
+                                            <img src="assets/images/main_btn_stella.svg" alt="">
+                                        </span>
+                                        <span class="main-btn__text">Googleマップで開く</span>
+                                        <span class="main-btn__arrow">
+                                            <img src="assets/images/web_btn_arrow.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="access__route">
+                                <h4 class="access__route-title">【お車でお越しの方】</h4>
+                                <p class="access__route-text">
+                                    東北自動車道 佐野藤岡IC 下車 → 国道50号を西へ14km。車で約13分。
+                                </p>
+                                <h4 class="access__route-title">【公共交通機関でお越しの方】</h4>
+
+                                <p class="access__route-text">
+                                    JR栃木駅より路線バス「ふれあいバス岩舟線」→ 岩舟総合支所 下車 徒歩約10分。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </section>
+
+                <!-- ===== Facilities セクション ===== -->
+                <section id="facilities" class="facilities">
+                    <div class="facilities__title-wrapper">
+                        <h2 class="section__title facilities__title">Facilities</h2>
+                        <p class="section__subtitle">施設案内</p>
+                    </div>
+
+                    <div class="facilities__info">
+                        <h3 class="info__title">
+                            <span class="info__bar"></span>管理棟（9:00〜22:00）
+                        </h3>
+                        <p class="facilities__info-text">
+                            チェックイン・アウト手続き、レンタルギア受け渡し、各種アクティビティ申込み、宅配便受取・発送、体験イベント。<br>
+                            売店、シャワールーム、トイレ、AED完備。
+                        </p>
+                        <p class="facilities__info-note">
+                            ※スタッフは22:00まで常駐。夜間は緊急用インターホンで対応します。
+                        </p>
+                    </div>
+
+                    <div class="facilities__info">
+                        <h3 class="info__title">
+                            <span class="info__bar"></span>衛生設備
+                        </h3>
+                        <p class="facilities__info-subtitle">シャワールーム（予約制）</p>
+                        <ul class="facilities__list">
+                            <li>・16:00〜22:00利用可／男女別4室</li>
+                            <li>・シャンプー、コンディショナー、ボディソープ、ドライヤー完備</li>
+                            <li>・お一人さま25分</li>
+                        </ul>
+                        <p class="facilities__info-subtitle">トイレ（管理棟、炊事棟隣）</p>
+                        <ul class="facilities__list">
+                            <li>・全館ウォシュレット</li>
+                            <li>・自動センサー照明</li>
+                            <li>・多目的トイレ1室（オストメイト対応）</li>
+                        </ul>
+                    </div>
+
+                    <div class="facilities__info">
+                        <h3 class="info__title">
+                            <span class="info__bar"></span>炊事棟
+                        </h3>
+                        <p class="facilities__info-text">
+                            食器や食材を洗える共用スペースです。洗剤やスポンジも完備しております。<br>
+                            また、ゴミの分別BOXも設置しております。
+                        </p>
+                    </div>
+
+                    <div class="facilities__info">
+                        <h3 class="info__title">
+                            <span class="info__bar"></span>施設内マップ
+                        </h3>
+                        <div class="facilities__map">
+                            <img src="assets/images/facilities__map.png" alt="施設内マップ" class="facilities__map-img">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== FAQ セクション ===== -->
+                <section id="faq" class="faq">
+                    <div class="faq__title-wrapper">
+                        <h2 class="section__title faq__title">FAQ</h2>
+                        <p class="section__subtitle">よくある質問</p>
+                    </div>
+
+                    <div class="faq__info">
+                        <h3 class="info__title">
+                            <span class="info__bar"></span>設備について
+                        </h3>
+                        <div class="faq__item">
+                            <button class="faq__question js-faq-toggle" aria-expanded="false">
+                                電源は使えますか？<span class="faq__icon"><img src="assets/images/question__open.svg"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__answer" hidden>
+                                オートサイト・コテージには各区画にAC100Vコンセント（最大1,500W）が1口ございます。ウッドデッキサイトは電源なしですが、管理棟ロビーに無料充電ステーションがあります。
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question js-faq-toggle" aria-expanded="false">
+                                シャワー・お風呂はありますか？<span class="faq__icon"><img src="assets/images/question__open.svg"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__answer" hidden>
+                                管理棟横に温水シャワールーム（24時間利用可）、コテージ専用の貸切バスルーム（予約制・無料）があります。シャンプー・ドライヤー完備。
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question js-faq-toggle" aria-expanded="false">
+                                Wi-Fiは利用できますか？<span class="faq__icon"><img src="assets/images/question__open.svg"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__answer" hidden>
+                                コテージと管理棟ロビー周辺で無料Wi-Fi提供。キャンプサイトは電波が弱いため、デジタルデトックスをおすすめしています。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__info">
+                        <h3 class="info__title">
+                            <span class="info__bar"></span>システムについて
+                        </h3>
+                        <div class="faq__item">
+                            <button class="faq__question js-faq-toggle" aria-expanded="false">
+                                予約内容の変更やキャンセルはどうすればよいですか？<span class="faq__icon"><img
+                                        src="assets/images/question__open.svg" alt=""></span>
+                            </button>
+                            <div class="faq__answer" hidden>
+                                ご予約の変更・キャンセルは公式サイトのマイページまたはお電話にて承ります。
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question js-faq-toggle" aria-expanded="false">
+                                支払い方法を教えて下さい。<span class="faq__icon"><img src="assets/images/question__open.svg"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__answer" hidden>
+                                クレジットカード、各種電子マネー、現金でのお支払いが可能です。
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <button class="faq__question js-faq-toggle" aria-expanded="false">
+                                荒天や台風の場合はどうなりますか？<span class="faq__icon"><img src="assets/images/question__open.svg"
+                                        alt=""></span>
+                            </button>
+                            <div class="faq__answer" hidden>
+                                荒天・台風の際は安全を最優先し、施設側からキャンセルのご案内をさせていただく場合がございます。
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </article>
+
+    </main>
+
+
+    <!-- ＝＝＝＝＝＝＝＝＝＝
+    　       footer
+         ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+    <footer class="footer">
+        <div class="footer__group">
+            <div class="footer__left">
+                <!-- ロゴ・住所 -->
+                <div class="footer__info">
+                    <h2 class="footer__logo"><img src="assets/images/footer_logo.svg" alt="Stella Knot Camp"></h2>
+                    <p class="footer__address">〒330-0845 栃木県芳賀郡茂木町2-25</p>
+                    <p class="footer__time">チェックイン/13:00-18:00<br>チェックアウト/〜10:00</p>
+                    <p class="footer__tel">0120-900-294</p>
+                </div>
+
+                <!-- フッター予約・料金ボタン -->
+                <div class="footer__btns">
+                    <a href="price-guid.html" class="footer__btn btn btn--info">
+                        <span class="btn__icon"><img class="info__icon-img" src="assets/images/plan_btn_icon.svg"
+                                alt=""></span>
+                        <span class="btn__text">プラン・料金</span>
+                        <span class="btn__arrow"><img class="info__arrow-img" src="assets/images/plan_btn_arrow.svg"
+                                alt=""></span>
+                    </a>
+
+                    <a href="#" class="footer__btn btn btn--booking">
+                        <span class="btn__icon"><img class="booking__icon-img" src="assets/images/web_btn_icon.svg"
+                                alt=""></span>
+                        <span class="btn__text">web予約</span>
+                        <span class="btn__arrow"><img class="booking__arrow-img" src="assets/images/web_btn_arrow.svg"
+                                alt=""></span></a>
+                </div>
+
+                <!-- ボタン下補足情報 -->
+                <p class="footer__note">※団体様の貸切も行っております。<br>お気軽にお問い合わせください。</p>
+            </div>
+            <div class="footer__right">
+                <!-- ナビゲーションリンク -->
+                <div class="footer__nav-wrapper">
+                    <ul class="footer__nav footer__nav--left">
+                        <li class="footer__item"><a href="index.html">トップページ</a></li>
+                        <li class="footer__item"><a href="index.html#news">お知らせ・イベント</a></li>
+                        <li class="footer__item"><a href="index.html#concept">Stella Knot Campについて</a></li>
+                        <li class="footer__item"><a href="model-stay.html">選べる宿泊スタイル</a></li>
+                    </ul>
+                    <ul class="footer__nav footer__nav--right">
+                        <li class="footer__item"><a href="index.html#experience">自然体験一覧</a></li>
+                        <li class="footer__item"><a href="infotmation.html#facilities">施設案内</a></li>
+                        <li class="footer__item"><a href="infotmation.html#access">アクセス</a></li>
+                        <li class="footer__item"><a href="infotmation.html#faq">よくある質問</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- インスタ -->
+                <div class="footer__sns">
+                    <a href="#" class="footer__instagram">
+                        <img src="assets/images/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- ページトップボタン -->
+        <div class="footer__pagetop">
+            <a href="#">
+                <img src="assets/images/footer_btn_PageTop.svg" alt="ページトップへ">
+                <span class="footer__pagetop-text">Page Top</span>
+            </a>
+        </div>
+        <div class="footer__bottom">
+            <small class="footer__copyright">&copy; Stella Knot Camp</small>
+        </div>
+    </footer>
+
+
+    <!-- 追従ボタン -->
+    <div class="fixed__btns">
+        <a href="price-guid.html" class="fixed__btn btn btn--info">
+            <span class="btn__icon"><img class="info__icon-img" src="assets/images/plan_btn_icon.svg" alt=""></span>
+            <span class="btn__text">プラン・料金</span>
+            <span class="btn__arrow"><img class="info__arrow-img" src="assets/images/plan_btn_arrow.svg" alt=""></span>
+        </a>
+
+        <a href="#" class="fixed__btn btn btn--booking">
+            <span class="btn__icon"><img class="booking__icon-img" src="assets/images/web_btn_icon.svg" alt=""></span>
+            <span class="btn__text">web予約</span>
+            <span class="btn__arrow"><img class="booking__arrow-img" src="assets/images/web_btn_arrow.svg"
+                    alt=""></span></a>
+    </div>
+
+    <!-- js -->
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>

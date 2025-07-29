@@ -1,0 +1,1240 @@
+@charset "utf-8";
+
+/* ==============================
+    common
+================================*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    color: #333;
+    background-color: #F9F7F1;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* サファリ用 */
+button,
+input,
+textarea {
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+.section__title {
+    font-family: "Yeseva One";
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.section__title-ja {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.64px;
+    margin-top: 10px;
+}
+
+
+@media (min-width: 768px) {
+    .section__title {
+        font-size: 7rem;
+    }
+
+    .section__title-ja {
+        font-size: 2rem;
+    }
+
+}
+
+/*==============================
+    drawer,footer, 追従ボタン
+===============================*/
+
+.btn--info,
+.btn--booking {
+    font-size: 1.4rem;
+    display: flex;
+    width: 170px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9C46A;
+    border-radius: 8px;
+    gap: 6px;
+    color: #34495E;
+}
+
+.btn--info img {
+    padding-bottom: 2px;
+}
+
+.fixed__btns {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    display: flex;
+    z-index: 1200;
+    gap: 20px;
+    align-items: baseline;
+}
+/* 
+@media screen and (min-width: 1280px) {
+.fixed__btns {
+    position: fixed;
+    left: 78%;
+    top: -7px;
+}
+} */
+
+/* footerにはいったら消える */
+.hidden {
+    display: none;
+}
+
+/* ==============================
+    詳細ボタン
+===============================*/
+
+.card__btn,
+.main-btn {
+    display: inline-block;
+    width: auto;
+    padding: 12px 18px;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid #4D6651;
+    background: #F9F7F1;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    gap: 6px;
+}
+
+
+.main-btn__text {
+    color: #4D6651;
+}
+
+.main-btn__icon img {
+    padding-bottom: 4px;
+}
+
+.main-btn__arrow img {
+    padding-bottom: 5px;
+}
+
+@media screen and (min-width:768px) {
+
+    .card__btn,
+    .main-btn {
+        padding: 12px 16px;
+    }
+}
+
+/* ==============================
+    header
+===============================*/
+
+.header__btn {
+    width: 47px;
+    height: 47px;
+    background-color: #34495e;
+    border-radius: 8px;
+    text-align: center;
+    color: #F9F7F1;
+}
+
+.header {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1050;
+}
+
+
+/* ==============================
+    drawer-menu
+===============================*/
+
+.drawer__close {
+    width: 36px;
+    height: 36px;
+    background-color: #34495e;
+    border-radius: 8px;
+    text-align: center;
+    color: #F9F7F1;
+    padding-bottom: 4px;
+}
+
+.drawer__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 0;
+    align-items: center;
+}
+
+.drawer__list {
+    margin-top: 46px;
+    margin-left: 16px;
+}
+
+.drawer__item {
+    margin-top: 25px;
+}
+
+.drawer__icon {
+    padding: 0 10px 5px 0;
+}
+
+.btn--booking {
+    margin-top: 25px;
+}
+
+.drawer__btns {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 16px;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    max-width: 320px;
+    height: 100vh;
+    background: #EEEFEA;
+    overflow-y: auto;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, .25);
+    transform: translateX(100%);
+    /* 初期は画面外 */
+    transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+    z-index: 1100;
+}
+
+.drawer.is-open {
+    transform: translateX(0);
+}
+
+/* ==============================
+    mv
+===============================*/
+.mv {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 390/844;
+}
+
+.mv__slides {
+    width: 100%;
+    height: 100vh;
+    aspect-ratio: 390/844;
+}
+
+.mv__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 390/844;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 3s;
+    z-index: 0;
+    width: 100%;
+}
+
+.mv__slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.mv__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+}
+
+.mv__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.25);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* mv__contentを画像の上に重ねる */
+.mv__content {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0);
+    width: 286px;
+    padding: 25px 30px 25px 56px;
+    box-sizing: border-box;
+    z-index: 2;
+    color: #F9F7F1;
+    border-radius: 8px;
+    background: rgba(249, 247, 241, 0.50);
+}
+
+.mv__content--day {
+    color: #34495E;
+    border-radius: 8px;
+}
+
+.mv__content--night {
+    background: rgba(52, 73, 94, 0.40);
+}
+
+.mv__copy {
+    margin-top: 10px;
+    font-family: "Shippori Mincho";
+    font-size: 2rem;
+    line-height: 2;
+    letter-spacing: 1.8px;
+}
+
+@media screen and (min-width:768px) {
+    .mv__slide {
+        aspect-ratio: 768/1024;
+        height: 100vh;
+        /* ↑これがないと下に変な余白できる */
+    }
+
+    .me__slides {
+        aspect-ratio: 768/1024;
+    }
+
+    .mv {
+        height: 100vh;
+    }
+
+    .mv__content {
+        top: 20%;
+    }
+
+
+}
+
+@media screen and (min-width:1280px) {
+    .mv__slide {
+        aspect-ratio: 1280/720;
+
+    }
+
+    .me__slides {
+        aspect-ratio: 1280/720;
+    }
+
+
+}
+
+/* ==============================
+    footer
+===============================*/
+
+.footer {
+    background-image:
+        linear-gradient(rgba(52, 73, 94, 0.5), rgba(52, 73, 94, 0.5)),
+        url("../images/footer.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #F9F7F1;
+    text-align: center;
+    padding: 64px 0;
+
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+.footer__logo {
+    margin-bottom: 24px;
+}
+
+.footer__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto 0;
+}
+
+.footer__tel {
+    font-family: "Yeseva One";
+    font-size: 2rem;
+}
+
+.footer__note {
+    margin-top: 14px;
+    font-size: 1.2rem;
+}
+
+/* フッターナビ */
+.footer__nav-wrapper {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin: 32px auto 0;
+    padding: 0 16px;
+}
+
+.footer__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.footer__item a {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    padding-left: 1.2em;
+}
+
+.footer__item a::before {
+    content: "→";
+    position: absolute;
+    left: -6px;
+}
+
+.footer__sns {
+    width: 44px;
+    height: 44px;
+    background-color: #333;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px auto 0;
+}
+
+
+
+.footer__copyright {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.footer__pagetop {
+    display: inline-block;
+    margin-top: 24px;
+    width: 60px;
+    height: 60px;
+
+}
+
+.footer__pagetop a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__pagetop-text {
+    font-family: "Shippori Mincho";
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer__group {
+        display: flex;
+        justify-content: space-between;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .footer__sns {
+        margin: 20px 0 0;
+    }
+
+    .footer__nav {
+        gap: 20px;
+    }
+
+    .footer__nav-wrapper {
+        gap: 40px;
+    }
+
+
+
+    .footer__nav-wrapper {
+        margin-top: 0;
+    }
+
+    .footer__right {
+        margin-top: 65px;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .footer__group {
+        max-width: 900px;
+    }
+}
+
+
+
+/* ==============================
+    news
+===============================*/
+
+.news__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.news__title,
+.news__title-ja {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.news__inner {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    padding: 0 5%;
+
+
+}
+
+.news__main {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex: 1;
+}
+
+/* フィルターボタン */
+.news {
+    padding: 100px 0 64px;
+}
+
+.news__filter {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.news__leaf {
+    position: absolute;
+    top: -70px;
+    right: -17px;
+    width: 90px;
+    z-index: 1;
+}
+
+
+@media screen and (min-width:398px) {
+    .news__leaf {
+        top: -103px;
+    }
+}
+
+
+
+.news__filter-btn {
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid #4D6651;
+    background: #F9F7F1;
+    color: #4D6651;
+    font-size: 1.4rem;
+    padding: 7px 12px;
+
+}
+
+.news__filter-btn--active {
+    display: inline-block;
+    border-radius: 8px;
+    background: #4D6651;
+    color: #F9F7F1;
+}
+
+.news__list {
+    margin-top: 30px;
+}
+
+.news__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: rgba(51, 51, 51, 0.3) 1px solid;
+}
+
+.news__category {
+    color: #4D6651;
+    font-size: 1.2rem;
+}
+
+.news__arrow-icon--active {
+    display: none;
+}
+
+.news__arrow-icon--inactive {
+    display: block;
+}
+
+.news__arrow--active .news__arrow-icon--active {
+    display: block;
+}
+
+.news__arrow--active .news__arrow-icon--inactive {
+    display: none;
+}
+
+/* 矢印ボタンのスタイル */
+.news__arrows {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 20px auto;
+    max-width: 1300px;
+}
+
+.news__arrow {
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+    transition: opacity 0.2s;
+}
+
+/* サムネイル */
+.news__thumbs-wrapper {
+    overflow-x: auto;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1400px;
+
+}
+
+/* スクロールバーを消す！ */
+.news__thumbs-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.news__thumbs {
+    display: flex;
+
+}
+
+.news__thumb {
+    flex-shrink: 0;
+    width: 230px;
+    cursor: pointer;
+    opacity: 0.7;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+
+}
+
+
+.news__thumb-date-vertical {
+    position: absolute;
+    left: -30px;
+    top: 3px;
+    writing-mode: vertical-rl;
+    font-family: "Yeseva One";
+    font-size: 1.8rem;
+    letter-spacing: 1.8px;
+
+}
+
+.news__thumb.is-active {
+    opacity: 1;
+}
+
+.news__thumb-info {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    text-align: left;
+}
+
+.news__more {
+    width: 80%;
+    max-width: 1300px;
+    text-align: right;
+    margin: 30px auto 0;
+}
+
+@media screen and (min-width:768px) {
+    .news__leaf {
+        right: -100px;
+    }
+
+    .news {
+        padding: 120px 0 100px;
+    }
+
+    .news__arrows {
+        margin: 30px auto;
+    }
+}
+
+
+
+/* ==============================
+    concept
+===============================*/
+.concept {
+    color: #F9F7F1;
+    line-height: 2;
+    background: rgba(52, 73, 94, 1);
+    padding: 100px 0;
+
+}
+
+.concept__inner {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1400px;
+}
+
+
+.concept__star {
+    position: absolute;
+    top: 0px;
+    left: 260px;
+    width: 90px;
+}
+
+
+
+.concept__title {
+    color: #F9F7F1;
+    font-family: "Shippori Mincho";
+    font-size: 2.9rem;
+    line-height: 2;
+}
+
+.concept__text {
+    margin-top: 40px;
+}
+
+.concept__more {
+    margin-top: 32px;
+    text-align: right;
+}
+
+.concept__more img {
+    padding-bottom: 7px;
+}
+
+
+.concept__img-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .concept {
+        padding: 120px 0;
+    }
+
+    .concept__inner {
+        display: flex;
+        gap: 40px;
+        max-width: 1400px;
+    }
+
+    .concept__img-wrapper img {
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .concept__title {
+        font-size: 3.5rem;
+    }
+
+    .concept__star {
+        position: absolute;
+        top: 0px;
+        left: 310px;
+        width: 100px;
+    }
+
+}
+
+
+/* ==============================
+    camp-style
+===============================*/
+
+.camp-style__item {
+    width: 100%;
+    height: auto;
+    position: relative;
+    aspect-ratio: 343 / 144;
+}
+
+.camp-style__more.card__btn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 2;
+}
+
+.camp-style__inner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.camp-style__list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.camp-style__item {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+
+.camp-style {
+    padding: 64px 0;
+}
+
+.camp-style__figure {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 343 / 144;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.camp-style__figure::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(238, 239, 234, 0.3);
+    z-index: 1;
+    pointer-events: none;
+    transition: background 0.3s;
+}
+
+/* ホバー時にオーバーレイを消す */
+.camp-style__card:hover .camp-style__figure::before,
+.camp-style__card:focus .camp-style__figure::before {
+    background: transparent;
+}
+
+.camp-style__figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+.camp-style__title-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.camp-style__icon {
+    width: 48px;
+    /* アイコンサイズはお好みで */
+    height: auto;
+    flex-shrink: 0;
+}
+
+@media screen and (min-width:768px) {
+    .camp-style {
+        padding: 100px 0;
+    }
+
+    .camp-style__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+
+    .camp-style__item {
+        width: 330px;
+    }
+
+    .camp-style__figure {
+        aspect-ratio: 26 / 15;
+    }
+
+}
+
+@media screen and (min-width:1167px) {
+    .camp-style__item {
+        flex: 1 1 330px;
+        max-width: 500px;
+        box-sizing: border-box;
+    }
+}
+
+/* ==============================
+   experience
+===============================*/
+
+.experience {
+    padding: 64px 0;
+}
+
+.experience__inner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.experience__list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experience__name {
+    font-family: "Shippori Mincho";
+    font-size: 2.4rem;
+    line-height: 1.8;
+}
+
+.experience__card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience__desc {
+    height: 77px;
+}
+
+.experience__more {
+    text-align: right
+}
+
+.experience__figure img {
+    width: 100%;
+    aspect-ratio: 344/267;
+}
+
+.experience__title-row {
+    display: flex;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.experience__icon {
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .experience {
+        padding: 100px 0;
+    }
+
+    .experience__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+
+    .experience__item {
+        max-width: 540px;
+    }
+
+    .experience__title-row {
+
+        gap: 20px;
+    }
+}
+
+/* ==============================
+    gallery
+===============================*/
+.gallery {
+    padding: 64px 0;
+}
+
+.gallery__title-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.gallery__icon {
+    width: 60px;
+    padding-bottom: 10px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+
+.gallery__wrapper {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.gallery__row {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 40s linear infinite;
+    width: max-content;
+   
+}
+
+
+
+
+.gallery__row--bottom {
+    animation: scroll-right 40s linear infinite;
+     margin-top: 20px;
+}
+
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.gallery_item {
+    flex-shrink: 0;
+    width: 25vw;
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.gallery_item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (min-width:768px) {
+    .gallery {
+        padding: 120px 0;
+    }
+
+    .gallery__wrapper {
+        margin-top: 60px;
+    }
+    
+}
+
+
+/* ==============================
+    information
+===============================*/
+.information__title-row {
+    position: relative;
+    /* display: flex; */
+    /* max-width: 90%; */
+    /* margin: left auto; */
+    display: inline-block;
+}
+
+.information__icon {
+    position: absolute;
+    top: -64px;
+    right: -35px;
+}
+
+
+.information__inner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.information__list {
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+.information__figure {
+    width: 100%;
+    aspect-ratio: 343 / 120;
+    overflow: hidden;
+    position: relative;
+}
+
+.information__figure::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(238, 239, 234, 0.3);
+    z-index: 1;
+    pointer-events: none;
+    transition: background 0.3s;
+}
+
+.information__figure:hover::before {
+    background: transparent;
+}
+
+.information__item {
+    position: relative;
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #4D6651;
+    margin: 0 auto;
+}
+
+.information__figure img {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+.information__body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: #F9F7F1;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 5px;
+    justify-content: center;
+
+}
+
+.information__name {
+    font-family: "Shippori Mincho";
+    font-size: 2.4rem;
+    line-height: 100%;
+
+}
+
+.information__more {
+    text-align: center;
+}
+
+.information {
+    padding: 64px 0;
+}
+
+@media screen and (min-width:768px) {
+    .information {
+        padding: 100px 0;
+    }
+
+    .information__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .information__item {
+        width: 330px;
+    }
+
+
+
+    .information__figure {
+        aspect-ratio: 26/15;
+    }
+
+    .information__list {
+        margin-top: 60px;
+    }
+
+    .information__icon {
+        position: absolute;
+        top: 0px;
+        right: -100px;
+    }
+
+}
+
+@media screen and (min-width:1167px) {
+    .information__item {
+        flex: 1 1 330px;
+        max-width: 500px;
+        box-sizing: border-box;
+    }
+}

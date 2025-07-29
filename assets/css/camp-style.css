@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+.camp-style {
+    background-color: #eeefea;
+}
+
+.camp-style {
+    padding: 50px 0;
+}
+
+.camp-style__description-wrapper {
+    margin-top: 40px;
+}
+
+.camp-style__description {
+    font-weight: 500;
+}
+
+.camp-style__item-title {
+    font-family: "Shippori Mincho";
+    font-size: 2.4rem;
+    line-height: 1.8;
+    background-color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px dashed #4D6651;
+    border-bottom: 1px dashed #4D6651;
+}
+
+.camp-style__item-image {
+    margin-top: 30px;
+}
+
+
+.camp-style__item-description {
+    margin-top: 20px;
+    height: 105px;
+    /* text-align: center; */
+}
+
+.camp-style__item-plans {
+    background: #F9F7F1;
+    padding: 10px 10px 15px;
+    width: 250px;
+    margin: 15px auto 0;
+    text-align: center;
+    color: #4D6651;
+    font-weight: 700;
+}
+
+.camp-style__item-plans span {
+    margin-right: 10px;
+}
+
+.camp-style__plan {
+    margin-top: 5px;
+}
+
+.camp-style__item-details {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width:1280px) {
+  .camp-style__items-wrapper {
+    display: flex;
+    gap: 50px;
+  }
+
+
+.camp-style {
+    padding: 120px 0;
+}
+
+}

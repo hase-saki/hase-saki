@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+/* ==============================
+    information
+================================*/
+
+.information {
+    padding: 64px 0;
+    background-color: #f9f7f1;
+}
+
+.info__title {
+    display: inline-flex;
+    align-items: center;
+    /* 文字の中心で縦棒を揃える */
+    font-family: "Shippori Mincho", serif;
+    font-size: 2.4rem;
+    /* お好みで */
+    font-weight: 800;
+    line-height: 1.4;
+    /* color: #333333;               */
+    gap: 12px;
+    /* 縦棒と文字の間隔 */
+    margin: 0;
+}
+
+.info__bar {
+    display: inline-block;
+    width: 5px;
+    height: 29px;
+    background-color: #4d6651;
+    border-radius: 3px;
+}
+
+@media screen and (min-width:1280px){
+    .information {
+    padding: 100px 0;
+}
+}
+
+
+
+/* ==============================
+    access
+================================*/
+
+.access__info {
+    margin-top: 40px;
+}
+
+.access__address {
+    margin-top: 20px;
+}
+
+.access__time {
+    margin-top: 15px;
+}
+
+.access__parking {
+    margin-top: 15px;
+}
+
+.access__map {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.map__more {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.access__route {
+    margin-top: 40px;
+}
+
+.access__route-title {
+    font-weight: 700;
+}
+
+.access__route-text {
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+.access__route-title:nth-of-type(2) {
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 1280px) {
+    .access__map-wrapper{
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .access__map-img {
+        width: 500px;
+    }
+
+    .access__route {
+        margin-top: 0;
+    }
+
+}
+
+/* ==============================
+    facilities
+================================*/
+
+.facilities {
+    margin-top: 50px;
+}
+
+.facilities__info {
+    margin-top: 40px;
+}
+
+.facilities__info-text {
+    margin-top: 20px;
+}
+
+.facilities__info-note {
+    margin-top: 15px;
+}
+
+.facilities__info-subtitle {
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.facilities__map {
+    margin-top: 20px;
+    max-width: 100%;
+}
+.facilities__map img {
+    width: 100%;
+}
+@media screen and (min-width: 1280px) {
+    .facilities {
+    margin-top: 100px;
+}
+}
+
+/* ==============================
+    faq
+================================*/
+
+.faq {
+    margin-top: 50px;
+}
+
+.faq__info {
+    margin-top: 40px;
+}
+
+.faq__question {
+    display: flex;
+    padding: 15px 16px;
+    justify-content: space-between;
+    border-radius: 8px;
+    background-color: #EEEFEA;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.faq__answer {
+    margin-top: 10px;
+    padding-left: 16px;
+}
+
+.faq__icon img {
+    width: 20px; 
+    height: auto; 
+    max-width: none;
+}
+
+/* トグルのアニメーション */
+.faq__answer {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.faq__answer[hidden] {
+    /* display: block;  */
+    max-height: 0;
+    opacity: 0;
+}
+
+.faq__answer:not([hidden]) {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+@media screen and (min-width: 1280px) {
+    .faq{
+    margin-top: 100px;
+}
+}

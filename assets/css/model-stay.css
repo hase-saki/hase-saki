@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+.stay-model {
+    background-color: #eeefea;
+}
+
+.stay-model__inner {
+    padding: 50px 5%;
+}
+
+.stay-model__description:first-of-type {
+    margin-top: 40px;
+}
+
+.stay-model__description {
+    margin-top: 20px;
+}
+
+.stay-model__plan-title {
+    font-family: "Shippori Mincho";
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-top: 40px;
+}
+
+.stay-model__day-header {
+    margin-top: 30px;
+}
+
+.stay-model__day-label {
+    font-family: "Shippori Mincho";
+    font-size: 2.4rem;
+    line-height: 180%;
+    background: #E9C46A;
+    padding: 5px 16px 0px 16px;
+    display: inline-block;
+}
+
+.stay-model__day {
+    background: #FFF;
+}
+
+.stay-model__timeline-item {
+    padding: 30px 18px;
+    display: flex;
+    gap: 16px;
+}
+
+.stay-model__event-title {
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.stay-model__event-desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 5px;
+    /* padding-left: 5px; */
+}
+
+.stay-model__icon {
+    width: 21px;
+    height: 21px;
+    aspect-ratio: 1/1;
+    z-index: 1;
+    /* margin-right: 16px; */
+}
+
+.stay-model__timeline {
+    position: relative;
+    /* ::beforeの基準 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* タイムライン中央の破線 */
+.stay-model__timeline::before {
+    content: "";
+    position: absolute;
+    left: 85px;
+    top: 40px;
+    bottom: 40px;
+    border-left: 1px dashed #34495E;
+    z-index: 0;
+}
+
+.stay-model__time {
+     display: inline-block;
+    /* width: 60px;
+    text-align: right; */
+    font-weight: 500;
+    /* margin-right: 16px; */
+}
+
+
+.stay-model__day2:nth-of-type(2) .stay-model__timeline-item:nth-child(1) .stay-model__icon {
+    margin-left: 9px;
+}
+.stay-model__day2:nth-of-type(2) .stay-model__timeline-item:nth-child(2) .stay-model__icon {
+    margin-left: 9px;
+}
+
+@media screen and (min-width: 1280px) {
+    .stay-model__days-wrapper {
+        display: flex;
+        gap: 100px; 
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .stay-model__day-container {
+        flex: 1; 
+    }
+}
