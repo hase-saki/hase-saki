@@ -88,14 +88,6 @@ textarea {
     gap: 20px;
     align-items: baseline;
 }
-/* 
-@media screen and (min-width: 1280px) {
-.fixed__btns {
-    position: fixed;
-    left: 78%;
-    top: -7px;
-}
-} */
 
 /* footerにはいったら消える */
 .hidden {
@@ -624,7 +616,7 @@ textarea {
     display: none;
 }
 
-/* 矢印ボタンのスタイル */
+/* 矢印ボタン */
 .news__arrows {
     display: flex;
     justify-content: flex-end;
@@ -887,7 +879,6 @@ textarea {
 
 .camp-style__icon {
     width: 48px;
-    /* アイコンサイズはお好みで */
     height: auto;
     flex-shrink: 0;
 }
@@ -973,7 +964,6 @@ textarea {
 .experience__title-row {
     display: flex;
     align-items: center;
-    /* gap: 20px; */
 }
 
 .experience__icon {
@@ -1039,15 +1029,13 @@ textarea {
 }
 
 
-
-
 .gallery__row--bottom {
     animation: scroll-right 40s linear infinite;
      margin-top: 20px;
 }
 
 
-
+/* スクロールアニメーション */
 @keyframes scroll-left {
     0% {
         transform: translateX(0%);
@@ -1098,10 +1086,7 @@ textarea {
 ===============================*/
 .information__title-row {
     position: relative;
-    /* display: flex; */
-    /* max-width: 90%; */
-    /* margin: left auto; */
-    display: inline-block;
+
 }
 
 .information__icon {
