@@ -20,13 +20,12 @@ img {
     height: auto;
 }
 
-/* サファリ用 */
+/* サファリ用? */
 button,
 input,
 textarea {
     -webkit-appearance: none;
     appearance: none;
-
 }
 
 .section__title {
@@ -111,7 +110,6 @@ textarea {
     gap: 6px;
 }
 
-
 .main-btn__text {
     color: #4D6651;
 }
@@ -125,7 +123,6 @@ textarea {
 }
 
 @media screen and (min-width:768px) {
-
     .card__btn,
     .main-btn {
         padding: 12px 16px;
@@ -151,7 +148,6 @@ textarea {
     right: 16px;
     z-index: 1050;
 }
-
 
 /* ==============================
     drawer-menu
@@ -220,6 +216,7 @@ textarea {
 /* ==============================
     mv
 ===============================*/
+
 .mv {
     position: relative;
     width: 100%;
@@ -320,8 +317,6 @@ textarea {
     .mv__content {
         top: 20%;
     }
-
-
 }
 
 @media screen and (min-width:1280px) {
@@ -333,8 +328,6 @@ textarea {
     .me__slides {
         aspect-ratio: 1280/720;
     }
-
-
 }
 
 /* ==============================
@@ -351,7 +344,6 @@ textarea {
     color: #F9F7F1;
     text-align: center;
     padding: 64px 0;
-
 }
 
 .footer__info {
@@ -401,7 +393,6 @@ textarea {
     gap: 12px;
 }
 
-
 .footer__item a {
     display: flex;
     align-items: center;
@@ -427,8 +418,6 @@ textarea {
     margin: 24px auto 0;
 }
 
-
-
 .footer__copyright {
     display: block;
     margin-top: 24px;
@@ -441,7 +430,6 @@ textarea {
     margin-top: 24px;
     width: 60px;
     height: 60px;
-
 }
 
 .footer__pagetop a {
@@ -457,7 +445,6 @@ textarea {
 }
 
 @media (min-width: 768px) {
-
     .footer {
         padding: 100px 0;
     }
@@ -481,8 +468,6 @@ textarea {
         gap: 40px;
     }
 
-
-
     .footer__nav-wrapper {
         margin-top: 0;
     }
@@ -492,14 +477,11 @@ textarea {
     }
 }
 
-
 @media (min-width: 1280px) {
     .footer__group {
         max-width: 900px;
     }
 }
-
-
 
 /* ==============================
     news
@@ -523,8 +505,6 @@ textarea {
     justify-content: center;
     gap: 10%;
     padding: 0 5%;
-
-
 }
 
 .news__main {
@@ -562,8 +542,6 @@ textarea {
     }
 }
 
-
-
 .news__filter-btn {
     display: inline-block;
     border-radius: 8px;
@@ -572,7 +550,6 @@ textarea {
     color: #4D6651;
     font-size: 1.4rem;
     padding: 7px 12px;
-
 }
 
 .news__filter-btn--active {
@@ -638,7 +615,6 @@ textarea {
     width: 80%;
     margin: 0 auto;
     max-width: 1400px;
-
 }
 
 /* スクロールバーを消す！ */
@@ -648,7 +624,6 @@ textarea {
 
 .news__thumbs {
     display: flex;
-
 }
 
 .news__thumb {
@@ -660,9 +635,7 @@ textarea {
     display: flex;
     flex-direction: column;
     margin-left: 35px;
-
 }
-
 
 .news__thumb-date-vertical {
     position: absolute;
@@ -672,7 +645,6 @@ textarea {
     font-family: "Yeseva One";
     font-size: 1.8rem;
     letter-spacing: 1.8px;
-
 }
 
 .news__thumb.is-active {
@@ -709,8 +681,6 @@ textarea {
     }
 }
 
-
-
 /* ==============================
     concept
 ===============================*/
@@ -719,7 +689,6 @@ textarea {
     line-height: 2;
     background: rgba(52, 73, 94, 1);
     padding: 100px 0;
-
 }
 
 .concept__inner {
@@ -729,15 +698,12 @@ textarea {
     max-width: 1400px;
 }
 
-
 .concept__star {
     position: absolute;
     top: 0px;
     left: 260px;
     width: 90px;
 }
-
-
 
 .concept__title {
     color: #F9F7F1;
@@ -758,7 +724,6 @@ textarea {
 .concept__more img {
     padding-bottom: 7px;
 }
-
 
 .concept__img-wrapper img {
     width: 100%;
@@ -792,7 +757,6 @@ textarea {
         left: 310px;
         width: 100px;
     }
-
 }
 
 
@@ -805,6 +769,8 @@ textarea {
     height: auto;
     position: relative;
     aspect-ratio: 343 / 144;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .camp-style__more.card__btn {
@@ -826,13 +792,6 @@ textarea {
     flex-direction: column;
     gap: 30px;
 }
-
-.camp-style__item {
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-
 
 .camp-style {
     padding: 64px 0;
@@ -904,7 +863,6 @@ textarea {
     .camp-style__figure {
         aspect-ratio: 26 / 15;
     }
-
 }
 
 @media screen and (min-width:1167px) {
@@ -1014,7 +972,6 @@ textarea {
     flex-shrink: 0;
 }
 
-
 .gallery__wrapper {
     overflow: hidden;
     margin-top: 30px;
@@ -1025,7 +982,6 @@ textarea {
     gap: 20px;
     animation: scroll-left 40s linear infinite;
     width: max-content;
-   
 }
 
 
@@ -1033,7 +989,6 @@ textarea {
     animation: scroll-right 40s linear infinite;
      margin-top: 20px;
 }
-
 
 /* スクロールアニメーション */
 @keyframes scroll-left {
@@ -1077,9 +1032,7 @@ textarea {
     .gallery__wrapper {
         margin-top: 60px;
     }
-    
 }
-
 
 /* ==============================
     information
@@ -1095,7 +1048,6 @@ textarea {
     right: -35px;
 }
 
-
 .information__inner {
     width: 90%;
     margin: 0 auto;
@@ -1109,7 +1061,6 @@ textarea {
     gap: 30px;
 
 }
-
 
 .information__figure {
     width: 100%;
@@ -1147,9 +1098,6 @@ textarea {
     display: block;
 }
 
-
-
-
 .information__body {
     position: absolute;
     top: 0;
@@ -1164,14 +1112,12 @@ textarea {
     gap: 20px;
     padding: 5px;
     justify-content: center;
-
 }
 
 .information__name {
     font-family: "Shippori Mincho";
     font-size: 2.4rem;
     line-height: 100%;
-
 }
 
 .information__more {
@@ -1198,8 +1144,6 @@ textarea {
         width: 330px;
     }
 
-
-
     .information__figure {
         aspect-ratio: 26/15;
     }
@@ -1213,7 +1157,6 @@ textarea {
         top: 0px;
         right: -100px;
     }
-
 }
 
 @media screen and (min-width:1167px) {
