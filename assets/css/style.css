@@ -1039,6 +1039,7 @@ textarea {
     information
 ===============================*/
 .information__title-row {
+    display: inline-block;
     position: relative;
 
 }
@@ -1046,7 +1047,7 @@ textarea {
 .information__icon {
     position: absolute;
     top: -64px;
-    right: -35px;
+    right: 0px;
 }
 
 .information__inner {
