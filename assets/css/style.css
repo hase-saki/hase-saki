@@ -973,8 +973,11 @@ textarea {
     display: flex;
     align-items: center;
     gap: 20px;
-    max-width: 90%;
+    width: 90%;
+    max-width: 1400px;
     margin: 0 auto;
+ 
+    
 }
 
 .gallery__icon {
@@ -1044,7 +1047,10 @@ textarea {
     .gallery__wrapper {
         margin-top: 60px;
     }
+
 }
+
+
 
 /* ==============================
     information
